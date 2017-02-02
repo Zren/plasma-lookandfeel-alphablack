@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Zren (Feb 2017)
+Comment=
+
+X-KDE-PluginInfo-Author=Chris Holland
+X-KDE-PluginInfo-Category=Plasma Look And Feel
+X-KDE-PluginInfo-Email=zrenfire@gmail.com
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=LGPL 2.1+
+X-KDE-PluginInfo-Name=com.github.zren.lnf.17.02
+X-KDE-PluginInfo-Version=17.02.1
+X-KDE-PluginInfo-Website=https://github.com/Zren/
+
+X-KDE-fallbackPackage=org.kde.breeze.desktop
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+
+X-KPackage-Dependencies=kns://plasma-themes.knsrc/api.kde-look.org/1084931,kns://plasmoids.knsrc/api.kde-look.org/1160672,kns://plasmoids.knsrc/api.kde-look.org/1166501,kns://plasmoids.knsrc/api.kde-look.org/1166510,kns://plasmoids.knsrc/api.kde-look.org/1100895,kns://plasmoids.knsrc/api.kde-look.org/1152230,kns://plasmoids.knsrc/api.kde-look.org/998901,kns://plasmoids.knsrc/api.kde-look.org/1100894,kns://kwin-tabbox.knsrc/api.kde-look.org/1153173,kns://yakuake.knsrc/api.kde-look.org/1165686
