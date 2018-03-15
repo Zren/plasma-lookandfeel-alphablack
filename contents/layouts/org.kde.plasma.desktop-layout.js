@@ -65,7 +65,7 @@ var layout = {
                         },
                         "/Configuration/General": {
                             "groupingStrategy": "0",
-                            "launchers": "file:///usr/share/applications/org.kde.yakuake.desktop,file:///usr/share/applications/org.kde.dolphin.desktop,preferred://browser",
+                            "launchers": "preferred://browser",
                             "maxStripes": "1",
                             "middleClickAction": "Close",
                             "separateLaunchers": "false",
@@ -118,7 +118,7 @@ var layout = {
                     "config": {
                         "/": {
                             "immutability": "1"
-                        }
+                        },
                         "/Configuration/Calendar": {
                             "month_eventbadge_type": "dots",
                             "month_show_border": "false",
