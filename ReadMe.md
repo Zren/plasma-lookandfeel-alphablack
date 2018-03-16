@@ -1,4 +1,4 @@
-ReadMe.md
+# Breeze AlphaBlack
 
 ## Dependencies
 * Desktop Theme
@@ -19,7 +19,7 @@ ReadMe.md
 
 ## Look and Feel Docs
 
-* `/home/chris/.local/share/knewstuff3/` will contain a bunch of `.knsregistry` files. This folder is populated when you browse icons/widgets/etc in the Get Hot New Stuff widget. You can convert these filenames to `kns://.knsrc/api.kde-look.org/1165686`, which you can use in the `X-KPackage-Dependencies` in the `metadata.desktop` file.
+* `~/.local/share/knewstuff3/` will contain a bunch of `.knsregistry` files. This folder is populated when you browse icons/widgets/etc in the Get Hot New Stuff widget. You can convert these filenames to `kns://.knsrc/api.kde-look.org/1165686`, which you can use in the `X-KPackage-Dependencies` in the `metadata.desktop` file.
 * The keys for `contents/defaults` can be figured out by reading the source code for the look and feel kcm:
   * https://github.com/KDE/plasma-desktop/blob/master/kcms/lookandfeel/kcm.cpp
 * If the `contents/colors` file is found, everything is copied to `~/.config/kdeglobals`.
