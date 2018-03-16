@@ -10,8 +10,14 @@ LayoutName=org.kde.breeze.desktop
 [kdeglobals][General]
 ColorScheme=Breeze
 
+[kdeglobals][Icons]
+Theme=breeze
+
 [kdeglobals][KDE]
 widgetStyle=breeze
 
 [plasmarc][Theme]
 name=breeze-alphablack
+
+[kwinrc][WindowSwitcher]
+LayoutName=thumbnail_grid
