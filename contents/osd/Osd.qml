@@ -27,6 +27,22 @@ PlasmaCore.Dialog {
     type: PlasmaCore.Dialog.OnScreenDisplay
     outputOnly: true
 
+    property int xPos: (Screen.desktopAvailableWidth - width) / 2
+    property int yPos: Screen.desktopAvailableHeight*0.9 - height
+
+    x: xPos
+    y: yPos
+
+    function applyPosition() {
+        x = xPos
+        y = yPos
+    }
+
+    Component.onCompleted: {
+        // applyPosition()
+        // Qt.callLater(applyPosition)
+    }
+
     // OSD Timeout in msecs - how long it will stay on the screen
     property int timeout: 1800
     // This is either a text or a number, if showingProgress is set to true,
