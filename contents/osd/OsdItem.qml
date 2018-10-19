@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.0
+import QtQuick 2.7
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtra
@@ -25,16 +25,23 @@ Row {
     property QtObject rootItem
 
     property int iconWidth: units.iconSizes.medium
+    readonly property int percentageWidth: percentageLabelMetrics.boundingRect.width
     property int progressBarWidth: Screen.desktopAvailableWidth / 5
 
+    width: iconWidth + progressBarWidth + percentageWidth
     height: iconWidth
-    width: iconWidth + progressBarWidth
+
+    TextMetrics {
+        id: percentageLabelMetrics
+        font: percentageLabel.font
+        text: "100"
+    }
 
     PlasmaCore.IconItem {
         id: icon
 
-        height: parent.height
         width: iconWidth
+        height: parent.height
 
         source: rootItem.icon
     }
@@ -50,6 +57,21 @@ Row {
         maximumValue: 100
 
         value: Number(rootItem.osdValue)
+    }
+
+    PlasmaExtra.Heading {
+        id: percentageLabel
+
+        width: percentageWidth
+        height: parent.height
+
+        visible: rootItem.showingProgress
+        text: (typeof rootItem.osdValue !== "undefined" ? rootItem.osdValue : "")
+        horizontalAlignment: Text.AlignHCenter
+        maximumLineCount: 1
+        elide: Text.ElideLeft
+        minimumPointSize: theme.defaultFont.pointSize
+        fontSizeMode: Text.VerticalFit
     }
 
     PlasmaExtra.Heading {
