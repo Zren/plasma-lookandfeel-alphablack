@@ -1,5 +1,7 @@
 /*
  * Copyright 2014 Martin Klapetek <mklapetek@kde.org>
+ * Copyright 2018 Chris Holland <zrenfire@gmail.com>
+ * Copyright 2018 /u/koneko-nyaa from /r/kde
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
