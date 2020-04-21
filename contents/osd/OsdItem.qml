@@ -24,18 +24,23 @@ import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
 
 Row {
+    spacing: units.smallSpacing
+
     property QtObject rootItem
 
     property int iconWidth: units.iconSizes.medium
     readonly property int percentageWidth: percentageLabelMetrics.boundingRect.width
     property int progressBarWidth: Screen.desktopAvailableWidth / 5
 
-    width: iconWidth + progressBarWidth + percentageWidth
+    width: iconWidth + spacing + progressBarWidth + spacing + percentageWidth
     height: iconWidth
 
     TextMetrics {
         id: percentageLabelMetrics
-        font: percentageLabel.font
+        font.family: percentageLabel.font.family
+        font.weight: percentageLabel.font.weight
+        font.pointSize: percentageLabel.font.pointSize
+        font.pixelSize: percentageLabel.font.pixelSize
         text: "100"
     }
 
@@ -71,7 +76,7 @@ Row {
         text: (typeof rootItem.osdValue !== "undefined" ? rootItem.osdValue : "")
         horizontalAlignment: Text.AlignHCenter
         maximumLineCount: 1
-        elide: Text.ElideLeft
+        elide: Text.ElideRight
         minimumPointSize: theme.defaultFont.pointSize
         fontSizeMode: Text.VerticalFit
     }
@@ -86,7 +91,7 @@ Row {
         text: rootItem.showingProgress ? "" : (rootItem.osdValue ? rootItem.osdValue : "")
         horizontalAlignment: Text.AlignHCenter
         maximumLineCount: 1
-        elide: Text.ElideLeft
+        elide: Text.ElideRight
         minimumPointSize: theme.defaultFont.pointSize
         fontSizeMode: Text.Fit
     }
