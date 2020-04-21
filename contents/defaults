@@ -1,12 +1,6 @@
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
 
-[kcminputrc][Mouse][WindowSwitcher]
-LayoutName=thumbnail_grid
-
-[kcminputrc][Mouse][WindowSwitcher][DesktopSwitcher]
-LayoutName=org.kde.breeze.desktop
-
 [kdeglobals][General]
 ColorScheme=Breeze
 
